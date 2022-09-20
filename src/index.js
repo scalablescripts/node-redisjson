@@ -10,7 +10,7 @@ app.use(cors({
 }));
 
 const client = new Client();
-await client.open("redis://antonio:Pass123!@redis-17522.c250.eu-central-1-1.ec2.cloud.redislabs.com:17522");
+await client.open("redis://<username>:<password>@<host>:<port>");
 
 const taskRepository = new Repository(taskSchema, client);
 
